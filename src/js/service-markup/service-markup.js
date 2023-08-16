@@ -48,12 +48,16 @@ class MarkUpInterface {
     this.input.classList.add('is-hidden');
   }
 
-  switchShowLoader() {
-    this.loader.classList.toggle('is-hidden');
+  showCard() {
+    this.card.classList.remove('is-hidden');
   }
 
-  switchShowCard() {
-    this.card.classList.toggle('is-hidden');
+  hiddenCard() {
+    this.card.classList.add('is-hidden');
+  }
+
+  switchShowLoader() {
+    this.loader.classList.toggle('is-hidden');
   }
 
   showError(type) {
@@ -68,7 +72,8 @@ class MarkUpInterface {
       case 'card':
         Notify.failure('Oops! Something went wrong! Choice another cat!', {
           clickToClose: true,
-          position: 'right-top',
+          position: 'left-top',
+          distance: '42px',
           timeout: 10000,
         });
         break;

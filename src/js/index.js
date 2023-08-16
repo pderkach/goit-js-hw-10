@@ -22,20 +22,21 @@ function addDataToSelect() {
       catInterface.showError('select');
       catInterface.hiddenSelect();
     })
-    .finally(() => {
-      catInterface.switchShowLoader();
-    });
+    .finally(() => catInterface.switchShowLoader());
 }
 
 function onShowCardCat(evt) {
-  catInterface.switchShowCard();
+  catInterface.hiddenCard();
   catInterface.switchShowLoader();
 
   fetchCatByBreed(evt)
-    .then(data => catInterface.createMarkUpCard(data))
-    .catch(() => catInterface.showError('card'))
-    .finally(() => {
-      catInterface.switchShowLoader();
-      catInterface.switchShowCard();
-    });
+    .then(data => {
+      catInterface.createMarkUpCard(data);
+      catInterface.showCard();
+    })
+    .catch(() => {
+      catInterface.hiddenCard();
+      catInterface.showError('card');
+    })
+    .finally(() => catInterface.switchShowLoader());
 }
