@@ -1,0 +1,47 @@
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.breed-select {
+  max-width: 300px;
+  margin-bottom: 16px;
+}
+
+.cat-info {
+  display: flex;
+  gap: 16px;
+}
+
+.card-text {
+  max-width: 720px;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.loader {
+  position: absolute;
+  top: 8px;
+  left: 320px;
+
+  width: 28px;
+  height: 28px;
+  border: 5px solid rgb(69, 69, 80);
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
