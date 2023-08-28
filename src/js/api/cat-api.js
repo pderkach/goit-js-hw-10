@@ -2,7 +2,7 @@ import axios from 'axios';
 import { MarkUpInterface } from '../service-markup/service-markup';
 
 const API_KEY =
-  'live_AcyYtuijYJbkmYjKcd9PeRtrvi4CnLbJ764HvvUKbVThSm2i7VrmHhlXwyRWDXiZ';
+  'live_TbW9oGoo1cDkVR60ECW2J7Lvo5Nv51liHXDyaMQY9iKra3dfFieDGSZlbH5njkqW';
 const URL_SELECT = 'https://api.thecatapi.com/v1/breeds';
 const URL_BREED_ID = 'https://api.thecatapi.com/v1/images/search';
 
